@@ -4,16 +4,16 @@ let currentnumber = "";
 let previousnumber = "";
 let operator = "";
 let clearOnNextNum = false;
-const numberButtons = document.querySelectorAll(".num-btn")
-const operatorButtons = document.querySelectorAll(".operator")
+const numberButtons = document.querySelectorAll(".num-btn");
+const operatorButtons = document.querySelectorAll(".operator");
 const equal = document.querySelector(".equal");
 const dot = document.querySelector(".dot");
 const clearBtn = document.querySelector(".clear"); //clear everything
 const clearEntryBtn = document.querySelector(".clear_entry"); //clear currententry
 const deleteBtn = document.querySelector(".delete"); //delete single value in currententry
 const plusminusBtn = document.querySelector(".plusminus"); //turn numbervalue positive or negative
-const previousDisplay = document.querySelector(".previous");
-const currentDisplay = document.querySelector(".current");
+const previousDisplay = document.querySelector("display_previousentry");
+const currentDisplay = document.querySelector(".display_currententry");
 
 //addition, subtraction, multiplication and division
 function addFunction(num1, num2) {
@@ -65,7 +65,7 @@ function operate(value1, value2, operators) {
         }
 
     } catch (e) {
-        currentDisplay.textContent = ("There's an error: ", e)
+        currentDisplay.textContent = ("There's an error: ", e);
     };
 
     currentDisplay.textContent = Math.round(output * 100000) / 100000;
@@ -143,6 +143,7 @@ function allClear() {
 
 clearBtn.addEventListener("click", allClear);
 
+//delete number button
 function delNumber() {
     currentDisplay.textContent = currentDisplay.textContent.toString().slice(0, -1);
     currentnumber = currentDisplay.textContent;

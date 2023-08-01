@@ -20,7 +20,7 @@
     background: dimgray;
 }
 
-.calculator form button{
+.calculator button{
     border: 0;
     outline: 0;
     width: 60px;
@@ -34,14 +34,14 @@
     margin: 5px;
 }
 
-form .displayer{
+.container .calculator .displayer{
     display: inline-block;
     justify-content: flex-end;
     margin: 20px 0;
     width: 290px;
 }
 
-form .displayer input {
+.container .calculator .displayer {
     border: 0;
     outline: 0;
     background: transparent;
@@ -53,7 +53,7 @@ form .displayer input {
     cursor: pointer;
     
 }
-form .displayer input[name="display_previousentry"]{
+.container .calculator .displayer .display_previousentry{
     font-size: 16px;
 }
 
