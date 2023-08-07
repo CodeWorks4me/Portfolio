@@ -13,8 +13,17 @@ class Calculator {
         this.operation = undefined
     }
 
+    clearEntry() {
+        this.currentOperand = ''
+    }
+
     delete() {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
+    }
+
+    //to be fixed
+    plusMinus() {
+
     }
 
     appendNumber(number) {
@@ -116,6 +125,8 @@ const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
 const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
+const clearEntryButton = document.querySelector('[data-clear-entry]')
+const plusMinusButton = document.querySelector('[data-plus-minus]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
@@ -137,6 +148,11 @@ operationButtons.forEach(button => {
     })
 })
 
+plusMinusButton.addEventListener('click', button => {
+    calculator.plusMinus()
+    calculator.updateDisplay()
+})
+
 equalsButton.addEventListener('click', button => {
     calculator.compute()
     calculator.updateDisplay()
@@ -144,6 +160,11 @@ equalsButton.addEventListener('click', button => {
 
 allClearButton.addEventListener('click', button => {
     calculator.clear()
+    calculator.updateDisplay()
+})
+
+clearEntryButton.addEventListener('click', button => {
+    calculator.clearEntry()
     calculator.updateDisplay()
 })
 
