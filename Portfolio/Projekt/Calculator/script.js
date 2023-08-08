@@ -21,11 +21,6 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
-    //to be fixed
-    plusMinus() {
-
-    }
-
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) {
             return
@@ -146,11 +141,6 @@ operationButtons.forEach(button => {
         calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
-})
-
-plusMinusButton.addEventListener('click', button => {
-    calculator.plusMinus()
-    calculator.updateDisplay()
 })
 
 equalsButton.addEventListener('click', button => {
