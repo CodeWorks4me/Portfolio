@@ -8,6 +8,3 @@ kombinerat så såg jag inget problem med att skapa denna counter-app då den vi
 När det gäller att kunna skapa en account så använde jag mig utav php och sql databas. Detta är för att jag personligen tycker att php passar bäst till skapandet av
 denna typ av applikation. När det gäller denna account skapande applikation med inloggning och utloggning så kan ni se möjligheten att kunna skapa mer än 1 account,
 samt logga in med den account skapad. Samt där du är limiterad där du inte är tillåten att få åtkomst till "user" tills efter du har loggat in.
-
-I framtiden så har jag i plan att skapa en webcrawler också med python och sedan kunna visa upp den.
-Mvh Blend Zebari
